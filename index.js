@@ -40,7 +40,7 @@ app.post("/submit", async (req, res) => {
 
   
 
-	res.render("index.ejs");
+	
 });
 
 app.listen(port, () => {
