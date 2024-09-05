@@ -36,22 +36,50 @@
     <div class="container2">
  <input class="elem1 "  type="text" name="links" id="links" placeholder="Paste your link here">
 <input class="elem2" type="submit" value="Shorten">
+<select class="form-select" name="sel1" aria-label="Default select example">
+  <option  value="1" selected>Shorten link</option>
+  <option  value="2">Links to Qr-Code</option>
+  
+</select>
     </div>
-<% if (locals.dat1===0) { %>
-     
-<% } else if(locals.dat1 === 400){ %>
-     <div class="container3">
-    <label for="link">Please provide a valid URL.</label>
-    </div> %>
-   
-<% } else if (locals.dat1 !== 400){ %>
+    
+<!-- select to have link or qr  optional -->
+
+
+
+<!-- --------- -->
+
+<!-- --------- -->
+
+<% if (locals.dat1 === 0) { %>
+    <% console.log("nothing is here") %>
+<% } else if (locals.dat1 === 400) { %>
     <div class="container3">
-    <label for="link"><a class="link-body-emphasis text-decoration-none" href="<%=locals.dat1 %>" ><%= locals.dat1%></a></label>
+        <label for="link">Please provide a valid URL.</label>
     </div>
+<% } else { %>
+    <% if (locals.dat1 !== 3) { %>
+        <div class="container3">
+            <label for="link"><a class="link-body-emphasis text-decoration-none" href="<%= locals.dat1 %>"><%= locals.dat1 %></a></label>
+        </div>
+    <% } else { %>
+        <!-- Assuming the QR code image will be displayed if locals.dat1 is 3 -->
+        <div class="container3">
+            <div class="smal-con">
+                <img src="qr-of-link.png" alt="QR Code" height="120px" width="120px">
+            </div>
+        </div>
+    <% } %>
 <% } %>
+ 
+</form> 
+   
+
+
+
 </form>
 
-
+ 
 
 
 
