@@ -62,13 +62,23 @@
      box-shadow: rgba(0,0,0,0.2) 0 0 15px;
     
 }
+.contain1{
+  width: 100%;
+    height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+    align-items: center;
+padding: 1.5rem;
+}
+
 
 .container2{
     width: 70%;
-    height: 8rem;
+    height: fit-content;
     background-color: antiquewhite;
     display:flex;
-    flex-direction:row;
+    flex-direction:column;
      justify-content: center;
     align-items: center;
 padding: 2rem;
@@ -96,6 +106,9 @@ padding: 2rem;
 
 
 }
+
+
+
 .smal-con{
     display: flex;
     justify-content: center;
